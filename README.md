@@ -1,6 +1,6 @@
 # SmartPark — Smart Parking Management System
 
-**COMP2432 — Operating Systems Course Project**
+**COMP2432 — Operating Systems Course Project (2025)**
 
 A parking management system for The Hong Kong Polytechnic University. SmartPark processes individual and batch bookings, allocates resources using FCFS, priority-based, and optimized scheduling, and generates booking and resource-utilization reports.
 
