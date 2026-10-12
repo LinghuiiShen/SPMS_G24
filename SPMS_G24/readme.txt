@@ -1,9 +1,5 @@
 Project Title: SmartPark: A Smart Parking Management System for PolyU Using OS-Level Process Coordination
-Our group members:
-HUANG Lingru 23102488D
-CUI Mingyue 23096396D
-SHEN Linghui 23103195D
-WANG Jialu 24140565X
+
 Welcome to our Smart Parking Management System(SPMS)!
 Please follow the following instructions so that you could have a better experience to explore our unique design.
 1. A brief introduction to SPMS system: Given the situation that the current parking management system of PolyU has a low resource utilization, our carefully structured SPMS system aims to improve resource utilization via three different crucial shceduling algorithms and the methods of inter process communication.
