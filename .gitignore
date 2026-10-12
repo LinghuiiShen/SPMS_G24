@@ -1,0 +1,5 @@
+build/
+*.o
+.DS_Store
+/input_commands.txt
+/analysis_report.txt

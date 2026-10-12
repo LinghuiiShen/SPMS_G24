@@ -1,7 +1,39 @@
-# COMP2432 — Operating Systems Project
+# SmartPark — Smart Parking Management System
 
-**SmartPark: A Smart Parking Management System** for The Hong Kong Polytechnic University. The system handles individual and batch bookings, allocates parking resources using FCFS, priority-based, and optimized scheduling, and generates booking and resource-utilization reports.
+**COMP2432 — Operating Systems Course Project**
 
-**Technologies:** C (C99), POSIX process creation (`fork`), pipes, shared memory, pthread mutexes, and GCC.
+A parking management system for The Hong Kong Polytechnic University. SmartPark processes individual and batch bookings, allocates resources using FCFS, priority-based, and optimized scheduling, and generates booking and resource-utilization reports.
 
-Source code, sample inputs, and build/run instructions are available in [`SPMS_G24/`](SPMS_G24/), with detailed usage in [`readme.txt`](SPMS_G24/readme.txt).
+**Technologies:** C (C99), POSIX processes (`fork`), pipes, shared memory, pthread mutexes, and GCC.
+
+## Repository Structure
+
+- `src/`: input handling, scheduling, resource management, output, and utility modules.
+- `examples/`: seven batch input files.
+- `docs/`: [project report](docs/Project_Report_G24.pdf), [original instructions](docs/original-readme.txt), and archived sample output.
+
+## Build and Run
+
+On Linux (the original project targets PolyU's Apollo environment), run from the repository root:
+
+```bash
+mkdir -p build
+gcc -std=c99 src/input_module.c src/output_module.c src/scheduler.c src/utils.c src/resource.c src/main.c -o build/spms -lrt -lpthread -lm
+./build/spms
+```
+
+At the application prompt, load a sample batch:
+
+```text
+addBatch -examples/batch004.dat
+```
+
+Wait for the next input prompt, then display results:
+
+```text
+printBookings -all
+```
+
+Use `-fcfs`, `-prio`, or `-opti` instead of `-all` to select one scheduling algorithm. See the original instructions for booking syntax and scheduling assumptions.
+
+The program writes `input_commands.txt` and `analysis_report.txt` in the working directory, clearing them at startup. Archived output in `docs/` is kept separately.
